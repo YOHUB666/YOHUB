@@ -6,7 +6,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Events.ClaimStar:InvokeServer(unpack(args))
-wait(1) -- wait 1 second between claims
+wait(5) -- wait 1 second between claims
 end
 wait(10) -- wait 10 seconds before checking again
 end
