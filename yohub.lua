@@ -1,11 +1,12 @@
+wait(5)
 while true do
-    while workspace.ClaimableStars:FindFirstChild("Star") do
-    local args = {
-    [1] = workspace.ClaimableStars.Star
-    }
-    
-    game:GetService("ReplicatedStorage").Events.ClaimStar:InvokeServer(unpack(args))
-    wait(0.01)
-    end
-    wait(0.1)
-    end
+while workspace.ClaimableStars:FindFirstChild("Star") do
+local args = {
+[1] = workspace.ClaimableStars.Star
+}
+
+game:GetService("ReplicatedStorage").Events.ClaimStar:InvokeServer(unpack(args))
+wait(1) -- wait 1 second between claims
+end
+wait(10) -- wait 10 seconds before checking again
+end
